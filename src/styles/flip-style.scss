@@ -1,0 +1,32 @@
+#coin {
+    position: relative;
+    margin: 20px auto;
+    width: 143px;
+    height: 143px;
+
+    transition: -webkit-transform 1s ease-in;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    div {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .side-heads {
+        background-image: url("../assets/img/heads.png");
+        z-index: 100;
+        object-fit: contain;
+    }
+
+    .side-tails {
+        background-image: url("../assets/img/tails.png");
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+    }
+}
+

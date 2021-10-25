@@ -1,3 +1,113 @@
+header {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+header h1 {
+  color: red;
+}
 
+main {
+  width: 80%;
+  border: 1px solid black;
+  text-align: center;
+}
+main #result {
+  display: inherit;
+  margin-bottom: 20px;
+}
+main #btn-start {
+  margin-bottom: 20px;
+}
+
+#coin {
+  position: relative;
+  margin: 20px auto;
+  width: 143px;
+  height: 143px;
+  transition: -webkit-transform 1s ease-in;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+#coin div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+#coin .side-heads {
+  background-image: url("../assets/img/heads.png");
+  z-index: 100;
+  object-fit: contain;
+}
+#coin .side-tails {
+  background-image: url("../assets/img/tails.png");
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+#coin.heads {
+  -webkit-animation: flipHeads 3s ease-out forwards;
+  -moz-animation: flipHeads 3s ease-out forwards;
+  -o-animation: flipHeads 3s ease-out forwards;
+  animation: flipHeads 3s ease-out forwards;
+}
+
+#coin.tails {
+  -webkit-animation: flipTails 3s ease-out forwards;
+  -moz-animation: flipTails 3s ease-out forwards;
+  -o-animation: flipTails 3s ease-out forwards;
+  animation: flipTails 3s ease-out forwards;
+}
+
+@keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1800deg);
+    -moz-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
+}
+@keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1980deg);
+    -moz-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
+  }
+}
+@-webkit-keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1800deg);
+    -moz-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
+}
+@-webkit-keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1980deg);
+    -moz-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
