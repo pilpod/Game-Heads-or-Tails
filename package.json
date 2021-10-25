@@ -1,0 +1,16 @@
+{
+  "name": "heads-or-tails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass-w": "sass --watch ./src/styles/index.scss ./public/styles/index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.3"
+  }
+}
